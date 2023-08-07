@@ -257,11 +257,11 @@ function data_is(){
     }
     var nodaa_ = document.querySelectorAll("#myTable_1 tbody tr").length
     if ( nodaa_ === 0 ){
-        $('#nodatass_').css('text-align', 'center')
-        $('#nodatass_').css('display', 'block')
+        $('#nodatass_1').css('text-align', 'center')
+        $('#nodatass_1').css('display', 'block')
     }
     else{
-        $('#nodatass_').css('display', 'none')
+        $('#nodatass_1').css('display', 'none')
     }
 
 
