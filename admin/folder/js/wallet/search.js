@@ -131,7 +131,7 @@ function createTableRow_1(i, formattedDate, id, check) {
             '<td>' + formattedDate + '</td>' +
             '<td>' + i.from_account.account_name + '</td>' +
             '<td>' + i.to_account.account_name + '</td>' +
-            '<td style="color: ' + color_ + ' !important;">' + i.amount + ' ₹</td>' +
+            '<td style="color: ' + color_ + ' !important;">' + i.amount + ' <i class="fa fa-rupee"></i></td>' +
             '<td>' + i.note + '</td>' +
             '<td>' +
             '    <a href="javascript:void(0)" onclick="updateModel(' + i.id + ',' + 0 + ')" class="bg-info mr-2">' +
@@ -165,7 +165,7 @@ function createTableRow_1(i, formattedDate, id, check) {
             '<td>' + formattedDate + '</td>' +
             '<td>' + i.category.cat_name + '</td>' +
             '<td>' + i.account.account_name + '</td>' +
-            '<td style="color: ' + color_ + ' !important;">' + i.amount + ' ₹</td>' +
+            '<td style="color: ' + color_ + ' !important;">' + i.amount + ' <i class="fa fa-rupee"></i></td>' +
             '<td>' + i.note + '</td>' +
             '<td>' +
             '    <a href="javascript:void(0)" onclick="updateModel(' + i.id + ',' + 0 + ')" class="bg-info mr-2">' +
