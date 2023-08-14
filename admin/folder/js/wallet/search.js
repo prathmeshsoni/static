@@ -91,7 +91,7 @@ function get_datas(chaek) {
 
 function renderTableRows_1(dataArray, id) {
 
-    const formattedDate = formatDate(dataArray.date_name);
+    const formattedDate = formatDate(dataArray.date_name.replace('Z', ''));
     const rowHTML = createTableRow_1(dataArray, formattedDate, id)
     const newRow = document.createElement("tr");
     newRow.style.background = rowHTML[1];
