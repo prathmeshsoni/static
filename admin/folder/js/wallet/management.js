@@ -33,7 +33,7 @@ function gettransaction() {
                         let date_name = data.not_transfer[i]['date']
 
                         transfer_table(data.not_transfer[i]['price'], date_name, 0, 2)
-                        transfer_table('', date_name, 0, 0)
+                        transfer_table(data.not_transfer[i]['price'], date_name, 0, 0)
 
                         for (var j = data.not_transfer[i]['data_list'].length - 1; j >= 0; j--) {
                             transfer_table(data.not_transfer[i]['data_list'][j], date_name, 0, 1)
@@ -47,7 +47,7 @@ function gettransaction() {
                     $('#nodatass_1').css('display', 'none')
                     for (var i = 0; i < data.transfer.length; i++) {
                         let date_name = data.transfer[i]['date']
-                        transfer_table('', date_name, 1, 0)
+                        transfer_table(data.transfer[i]['price'], date_name, 1, 0)
 
                         for (var j = data.transfer[i]['data_list'].length - 1; j >= 0; j--) {
                             transfer_table(data.transfer[i]['data_list'][j], date_name, 1, 1)
@@ -103,8 +103,9 @@ function transfer_table(dataArray, date_id, id, check) {
         newRow_.id = 'date-' + date_id;
         newRow_.style.background = '#e4f3ff';
         newRow_.innerHTML = '<td>' + date_id + '</td>' +
-            '<td style="color:'+ rowHTML[2] +' ;" >' + dataArray.amount + ' <i class="fa fa-rupee"></i></td>' +
-            '<td colspan="5" ></td>';
+            '<td style="color:#000fff ;" >' + dataArray.temp_add + ' <i class="fa fa-rupee"></i></td>' +
+            '<td style="color:#ff0000 ;" >' + dataArray.temp_sub + ' <i class="fa fa-rupee"></i></td>' +
+            '<td colspan="4" ></td>';
         tableBody.insertBefore(newRow_, tableBody.firstChild);
     } else {
         var table = $('#myTable_2').DataTable();
